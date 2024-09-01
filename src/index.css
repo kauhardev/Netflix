@@ -1,0 +1,64 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: black;
+  color: white;
+}
+
+.conteiner{
+  width: 80%;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  outline: none
+}
+
+button{
+  cursor: pointer;
+  outline: none
+}
+
+input{
+  outline: none
+}
+body::-webkit-scrollbar{
+  width: 7px;
+ 
+ 
+  }
+  body::-webkit-scrollbar-track{
+    background-color:black;
+  }
+  body::-webkit-scrollbar-thumb{
+    background: linear-gradient(265deg, #fa2003 6.79%, #0e0f42 97.2%);
+    border-radius: 15px;
+  }
+
+.bg{
+  background-color: rgba(29, 28, 28, 0.288);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 45;
+  backdrop-filter: blur(5px);
+}
+.homebg{
+  background: radial-gradient(51.39% 511.66% at 50% 50%, #FF9900 0%, #E50914 17.27%, #0E1B4F 79.44%, #000413 100%);
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
