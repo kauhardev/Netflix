@@ -5,7 +5,8 @@ const Footer = () => {
         <div className='py-[60px]'>
             <div className="conteiner">
                 <div className="flex items-center justify-around">
-                    <div className="flex items-start flex-col gap-[10px] text-gray-400">
+                  <div className="">
+                  <div className="flex items-start flex-col gap-[10px] text-gray-400">
                         <a className='text-white text-xl mb-5' >Questions? Call 1-844-505-2993</a>
                         <a >FAQ</a>
                         <a >Investor Relations</a>
@@ -22,7 +23,10 @@ const Footer = () => {
                         <a >Only on Netflix</a>
 
                     </div>
-                    <div className="flex items-start flex-col gap-[10px] text-gray-400">
+                  </div>
+
+                 <div className="">  
+                     <div className="flex items-start flex-col gap-[10px] text-gray-400">
                         <a >Account</a>
                         <a >Netflix Shop</a>
                         <a >Terms of Use</a>
@@ -37,7 +41,7 @@ const Footer = () => {
                         <a >Speed Test</a>
                         <a >Ad Choices</a>
 
-                    </div>
+                    </div></div>
                 </div>
             </div>
         </div>
