@@ -7,9 +7,21 @@ import section3 from "../../../assets/images/section3.png";
 import section4 from "../../../assets/images/section4.png";
 import netflixPng from  '../../../assets/images/netflixPng.png'
 import popcorn from "../../../assets/images/SVG.svg";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer";
 
 const Home = () => {
+const {user} = useAuth()
+const nav = useNavigate()
 
+const showFilms = () =>{
+if(user){
+  nav('/product')
+}else{
+  alert(404)
+}
+}
 
   return (
     <>
@@ -30,16 +42,20 @@ const Home = () => {
               Ready to watch? Enter your email to create or restart your
               membership.
             </h1>
-            <div className="flex items-center  2xl:justify-between max-xl:flex-col gap-[20px]">
-              <input
+            {/* <div className="flex items-center  2xl:justify-between max-xl:flex-col gap-[20px]">
+              <input onChange={(e) => setInputValue(e.target.value)}
+              value={inputValue}
                 type="email"
                 placeholder="Email address"
                 className="bg-[#161616B2] py-[18px] px-[32px] xl:w-[450px] max-xl:w-[280px] text-white md:text-2xl max-lg:text-xl rounded-md border-2 border-gray-500 outline-none"
               />
-              <button className="py-[18px] px-[32px] md:text-2xl max-lg:text-[18px] bg-[#E50914] font-semibold flex items-center justify-between gap-[15px]">
+              <button onClick={()=> getProduct()} className="py-[18px] px-[32px] md:text-2xl max-lg:text-[18px] bg-[#E50914] font-semibold flex items-center justify-between gap-[15px]">
                 Get Started <FaChevronRight />
+              </button> */}
+              <button onClick={()=> showFilms()} className=" mt-[30px] py-[18px] px-[32px] md:text-2xl max-lg:text-[18px] bg-[#E50914] font-semibold flex items-center justify-between gap-[15px]">
+               Show Films <FaChevronRight />
               </button>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
@@ -138,6 +154,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

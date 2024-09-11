@@ -4,6 +4,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { useAuth } from "../context/AuthContext";
 import { LuLogOut } from "react-icons/lu";
 import logo from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { register, signInWithGoogle, LogIn, user, LogOut } = useAuth();
@@ -47,7 +48,9 @@ const Header = () => {
     <div className="py-[30px] ">
       <div className="conteiner">
         <div className="flex items-center justify-between ">
+          <Link to={'/'} > 
           <img src={logo} alt="img" className=" md:w-[200px] max-lg:w-[100px]" />
+          </Link>
 
           <div className="flex items-center justify-between gap-[60px] relative">
             {user ? null : (
